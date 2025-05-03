@@ -24,7 +24,7 @@ df_raw = tablas[0]
 
 # Paso 3
 
-df_raw.columns = ["Numero", "Canción", "Artista", "Álbum", "Millones de reproducciones", "Fecha de publicación"]
+df_raw.columns = ["Numero", "Canción", "Artista", "Álbum", "Millones de reproducciones", "Fecha de publicación", "Pais"]
 df = df_raw[["Canción", "Artista", "Millones de reproducciones", "Fecha de publicación"]].dropna()
 
 df['Millones de reproducciones'] = df['Millones de reproducciones'].astype(str).str.replace('[^0-9.]', '', regex=True).astype(float)
